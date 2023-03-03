@@ -1,14 +1,24 @@
 package HomeWork.Task1;
 
 /**
- * В классе BabyProduct добавлены новые поля - minAge, которое хранит минимальный возраст ребенка 
- * для использования товара, и hypoallergenic, которое хранит информацию о гипоаллергенности товара.
+ * Класс BabyProduct наследован от BasicProduct
+ * Добавлены новые поля - minAge, которое хранит минимальный возраст ребенка для использования товара
+ * hypoallergenic, которое хранит информацию о гипоаллергенности товара.
  */
 public class BabyProduct extends BasicProduct {
     private int minAge;
-    private boolean hypoallergenic;
-
-    public BabyProduct(String name, float price, int quantity, String unit, int minAge, boolean hypoallergenic) {
+    private String hypoallergenic;
+    /**
+     * Конструктор BabyProduct содержит поля:
+     * @param name - Название продукта  
+     * @param price - Цена
+     * @param quantity - Количество
+     * @param unit - ед. измерения
+     * @param minAge - минимальный возраст
+     * @param hypoallergenic - гироаллергенность товара
+     */
+    public BabyProduct(String name, float price, int quantity, String unit,
+     int minAge, String hypoallergenic) {
         super(name, price, quantity, unit);
         this.minAge = minAge;
         this.hypoallergenic = hypoallergenic;
@@ -22,11 +32,18 @@ public class BabyProduct extends BasicProduct {
         this.minAge = minAge;
     }
 
-    public boolean isHypoallergenic() {
+    public String getHypoallergenic() {
         return hypoallergenic;
     }
 
-    public void setHypoallergenic(boolean hypoallergenic) {
+    public void setHypoallergenic(String hypoallergenic) {
         this.hypoallergenic = hypoallergenic;
     }
+
+    // Вывод информации о товаре (перегрузка метода toString класса Object)
+    public String toString() {
+        return String.format("%s От %d лет; Гипоаллергенность: %s;",
+         super.toString(), this.minAge, this.hypoallergenic);
+    }
+
 } 

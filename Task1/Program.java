@@ -19,5 +19,9 @@ public class Program {
 
         BasicProduct eggs = new Eggs("Яйца", 100, 1, "упаковка", 10);
         System.out.println(eggs);
+
+        BasicProduct masks = new BabyProduct("Маска", 334, 1, "шт",
+         3, "низкая");
+        System.out.println(masks);
     }
 }

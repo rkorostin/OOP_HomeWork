@@ -56,7 +56,7 @@ public class BasicProduct {
     
     @Override
     public String toString() {
-        return String.format("Name: %s; Price: %.2f; Quantity: %d; unit: %s;",
+        return String.format("Продукт: %s; Цена: %.2f; Количество: %d; Ед. измерения: %s;",
         this.name, this.price, this.quantity, this.unit);
     }
 }
