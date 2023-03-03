@@ -23,5 +23,11 @@ public class Program {
         BasicProduct masks = new BabyProduct("Маска", 334, 1, "шт",
          3, "низкая");
         System.out.println(masks);
+
+        BasicProduct toiletPaper = new ToiletPaper("Туалетная бумага", 220, 1,
+         "упаковка", 15, 4);
+        System.out.println(toiletPaper);
+
+        
     }
 }
