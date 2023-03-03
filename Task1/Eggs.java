@@ -1,16 +1,20 @@
 package HomeWork.Task1;
+
 /**
  * Класс Eggs наследуется от BasicProduct
- * Добавлено новое поле packQuantity, которое содержит в количество штук в упаковке
+ * Добавлено новое поле packQuantity, которое содержит в количество штук в
+ * упаковке
  */
 public class Eggs extends BasicProduct {
     private int packQuantity;
+
     /**
      * Конструктор Eggs содержит поля:
-     * @param name - Название продукта
-     * @param price - Цена
-     * @param quantity - Количество
-     * @param unit - ед. измерения
+     * 
+     * @param name         - Название продукта
+     * @param price        - Цена
+     * @param quantity     - Количество
+     * @param unit         - ед. измерения
      * @param packQuantity - количество шт. в упаковке
      */
     public Eggs(String name, double price, int quantity, String unit, int packQuantity) {

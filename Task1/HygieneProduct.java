@@ -13,7 +13,7 @@ public class HygieneProduct extends BasicProduct {
      * @param unit - ед. измерения
      * @param packQuantity кол-во шт. в упаковке
      */
-    public HygieneProduct(String name, float price, int quantity, String unit, int packQuantity) {
+    public HygieneProduct(String name, double price, int quantity, String unit, int packQuantity) {
         super(name, price, quantity, unit);
         this.packQuantity = packQuantity;
     }
@@ -24,5 +24,10 @@ public class HygieneProduct extends BasicProduct {
 
     public void setPackQuantity(int packQuantity) {
         this.packQuantity = packQuantity;
+    }
+
+    // Вывод информации о товаре (перегрузка метода toString класса Object)
+    public String toString() {
+        return String.format("%s Кол-во шт. в уп.: %d;", super.toString(), this.packQuantity);
     }
 }
