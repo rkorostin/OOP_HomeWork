@@ -5,7 +5,14 @@ package HomeWork.Task1;
  */
 public class HygieneProduct extends BasicProduct {
     private int packQuantity;
-
+    /**
+     * Конструктор HygieneProduct включает поля:
+     * @param name - Название продукта
+     * @param price - Цена
+     * @param quantity - Количество
+     * @param unit - ед. измерения
+     * @param packQuantity кол-во шт. в упаковке
+     */
     public HygieneProduct(String name, float price, int quantity, String unit, int packQuantity) {
         super(name, price, quantity, unit);
         this.packQuantity = packQuantity;

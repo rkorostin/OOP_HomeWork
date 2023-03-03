@@ -3,6 +3,7 @@ package HomeWork.Task1;
 /**
  * Класс Milk наследуется от класса FoodProduct,
  * который в свою очередь наследуется от родительского класса BasicProduct
+ * Добавлено новое поле fatPercentage, которое содержит в себе процент жирности
  */
 public class Milk extends FoodProduct {
     private double fatPercentage;
