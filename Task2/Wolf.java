@@ -8,8 +8,10 @@ public class Wolf implements WildAnimal {
     private String eyeColor;
     private String habitat;
     private String dateFound;
+    private boolean isAlpha;
 
-    public Wolf(double height, double weight, String eyeColor, String habitat, String dateFound) {
+    public Wolf(double height, double weight, String eyeColor,
+         String habitat, String dateFound, Boolean isAlpha) {
         this.height = height;
         this.weight = weight;
         this.eyeColor = eyeColor;
@@ -39,6 +41,7 @@ public class Wolf implements WildAnimal {
         System.out.println("Цвет глаз: " + eyeColor);
         System.out.println("Место обитания: " + habitat);
         System.out.println("Дата нахождения: " + dateFound);
+        System.out.println("Вожак стаи: " + (isAlpha ? "Yes" : "No"));
     }
 
     @Override
@@ -54,6 +57,10 @@ public class Wolf implements WildAnimal {
     @Override
     public void makeSound() {
         System.out.println("Воет на луну");
+    }
+
+    public boolean isAlpha() {
+        return isAlpha;
     }
 
 }
