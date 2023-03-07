@@ -7,7 +7,7 @@ public interface HomeAnimal extends Animal {
 
     boolean isVaccinated(); // Наличие прививок
 
-    String getFurColor(); // Цвет шерсти
+    String getWoolColor(); // Цвет шерсти
 
     String getBirthDate(); // Дата рождения
 
