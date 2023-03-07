@@ -9,18 +9,21 @@ public class Cat implements HomeAnimal {
     private String name;
     private String breed;
     private boolean isVaccinated;
-    private String furColor;
+    private boolean isWoolColor;
+    private String woolColor;
     private String birthDate;
 
     public Cat(double height, double weight, String eyeColor, String name,
-            String breed, boolean isVaccinated, String furColor, String birthDate) {
+            String breed, boolean isVaccinated, Boolean isWoolColor,
+            String woolColor, String birthDate) {
         this.height = height;
         this.weight = weight;
         this.eyeColor = eyeColor;
         this.name = name;
         this.breed = breed;
         this.isVaccinated = isVaccinated;
-        this.furColor = furColor;
+        this.isVaccinated = isWoolColor;
+        this.woolColor = woolColor;
         this.birthDate = birthDate;
     }
 
@@ -51,7 +54,8 @@ public class Cat implements HomeAnimal {
         System.out.println("Рост: " + height + " см");
         System.out.println("Вес: " + weight + " кг");
         System.out.println("Цвет глаз: " + eyeColor);
-        System.out.println("Цвет шерсти: " + furColor);
+        System.out.println("Наличие шерсти: " + (isWoolColor ? "Yes" : "No"));
+        System.out.println("Цвет шерсти: " + woolColor);
         System.out.println("Дата рождения: " + birthDate);
         System.out.println("Наличие прививки: " + (isVaccinated ? "Yes" : "No"));
     }
@@ -71,9 +75,13 @@ public class Cat implements HomeAnimal {
         return isVaccinated;
     }
 
+    public boolean isWoolColor() {
+        return isWoolColor;
+    }
+
     @Override
-    public String getFurColor() {
-        return furColor;
+    public String getWoolColor() {
+        return woolColor;
     }
 
     @Override
