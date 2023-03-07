@@ -22,7 +22,7 @@ public class Cat implements HomeAnimal {
         this.name = name;
         this.breed = breed;
         this.isVaccinated = isVaccinated;
-        this.isVaccinated = isWoolColor;
+        this.isWoolColor = isWoolColor;
         this.woolColor = woolColor;
         this.birthDate = birthDate;
     }
@@ -91,6 +91,6 @@ public class Cat implements HomeAnimal {
 
     @Override
     public void showAffection() {
-        System.out.println(name + " проявляет ласку");
+        System.out.println(name + " Трётся об ноги");
     }
 }
