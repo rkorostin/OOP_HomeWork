@@ -71,7 +71,7 @@ public class FigureCollection {
                                 ((Rectangle) figure).getLength(), ((Rectangle) figure).getWidth(), figure.getArea(), figure.getPerimeter()));
             } else if (figure instanceof Circle) {
                 System.out.println(
-                        String.format("Круг с радиусом: %.2f; Площадь: %.2f; Периметр: %.2f",
+                        String.format("Круг с радиусом: %.2f; Площадь: %.2f; Длина окружности: %.2f",
                                 ((Circle) figure).getRadius(), figure.getArea(), figure.getPerimeter()));
             }
         }
