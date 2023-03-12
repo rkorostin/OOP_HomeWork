@@ -59,7 +59,7 @@ public class FigureCollection {
             if (figure instanceof Triangle) {
                 System.out.println(
                         String.format("Треугольник со сторонами: %.2f, %.2f, %.2f; Площадь: %.2f; Периметр: %.2f",
-                                ((Triangle) figure).getA(), ((Triangle) figure).getB(), ((Triangle) figure).getB(),
+                                ((Triangle) figure).getA(), ((Triangle) figure).getB(), ((Triangle) figure).getC(),
                                 figure.getArea(), figure.getPerimeter()));
             } else if (figure instanceof Square) {
                 System.out.println(
