@@ -1,14 +1,17 @@
+/**
+ * Класс Contact содержит три поля: имя, фамилия и номер телефона. 
+ * Он также содержит конструктор для создания нового контакта и методы доступа к полям. 
+ */
+
 public class Contact {
     private String firstName;
     private String lastName;
     private String phone;
-    private String email;
 
-    public Contact(String firstName, String lastName, String phone, String email) {
+    public Contact(String firstName, String lastName, String phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        this.email = email;
     }
 
     public String getFirstName() {
@@ -35,21 +38,16 @@ public class Contact {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @Override
+    /**
+     * Возвращает строковое представление объекта Contact
+     */
     public String toString() {
         return "Контакт{" +
                 "Имя='" + firstName + '\'' +
                 ", Фамилия='" + lastName + '\'' +
                 ", Телефон='" + phone + '\'' +
-                ", email='" + email + '\'' +
                 '}';
     }
 }
