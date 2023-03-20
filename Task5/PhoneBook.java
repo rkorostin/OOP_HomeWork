@@ -95,16 +95,19 @@ public class PhoneBook {
     }
 
     // импортирует список контактов из CSV файла с заданным именем файла.
-    // Файл должен содержать данные в формате "имя,фамилия,номер телефона"
+    // Файл должен содержать данные в формате "id,имя,фамилия,номер телефона"
     public void importFromCSV(String fileName) {
         List<Contact> importedContacts = fileCSV.readFromCSV(fileName);
         contacts.addAll(importedContacts);
+        FileCSV.writeToCSV(contacts, "contacts.csv");
+        System.out.println("В телефонный справочник добавлены контакты из файла " + fileName);
     }
 
     // экспортирует список контактов в CSV файл с заданным именем файла.
-    // Файл будет содержать данные в формате "имя,фамилия,номер телефона"
+    // Файл будет содержать данные в формате "id,имя,фамилия,номер телефона"
     public void exportToCSV(String fileName) {
         fileCSV.writeToCSV(contacts, fileName);
+        System.out.println("Контакты телефонного справочника экспортированы в файл " + fileName);
     }
 
     // возвращает список контактов, прочитанных из файла contacts.csv
