@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Scanner;
 
 public class ConsoleView {
@@ -26,7 +25,7 @@ public class ConsoleView {
             System.out.println("0. Выход");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -74,20 +73,18 @@ public class ConsoleView {
                     System.out.println("(Импорт данных) введите имя файла:");
                     String fileName = scanner.nextLine();
                     phoneBook.importFromCSV(fileName);
-                    System.out.println("Импортированные контакты из " + fileName);
                     break;
                 case 8:
                     System.out.println("(Экспорт данных) введите имя файла:");
                     fileName = scanner.nextLine();
                     phoneBook.exportToCSV(fileName);
-                    System.out.println("Экспортированные контакты в " + fileName);
                     break;
                 case 0:
                     running = false;
                     break;
                 default:
                     System.out.println("Неверный выбор");
-                    
+
             }
         }
     }
