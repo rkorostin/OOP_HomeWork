@@ -6,11 +6,14 @@
  */
 
 public class Contact {
+
+    private String idContact;
     private String firstName;
     private String lastName;
     private String phone;
 
-    public Contact(String firstName, String lastName, String phone) {
+    public Contact(String idContact, String firstName, String lastName, String phone) {
+        this.idContact = idContact;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
@@ -40,9 +43,17 @@ public class Contact {
         this.phone = phone;
     }
 
+    public String getIdContact() {
+        return idContact;
+    }
+
+    public void setIdContact(String idContact) {
+        this.idContact = idContact;
+    }
+
     @Override
     public String toString() {
-        return "Контакт{" +
+        return idContact + "_Контакт{" +
                 "Имя='" + firstName + '\'' +
                 ", Фамилия='" + lastName + '\'' +
                 ", Телефон='" + phone + '\'' +
